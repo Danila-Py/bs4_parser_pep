@@ -46,7 +46,10 @@ def whats_new(session):
                 find_tag(soup, 'dl').text.replace('\n', ' ')
             ))
         except ConnectionError as error:
-            fail_soups.append(SOUP_ERROR.format(link=version_link, error=error))
+            fail_soups.append(SOUP_ERROR.format(
+                link=version_link,
+                error=error
+            ))
             continue
     list(map(logging.info, fail_soups))
     return results
