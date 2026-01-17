@@ -18,3 +18,37 @@
 - запись результатов работы в файл .csv.
 
 Настроено логирование - логи выводятся в терминал и сохраняются в отдельной директории с ротацией.
+
+## Установка
+1. Склонируйте репозиторий:
+
+2. Активируйте venv и установите зависимости:
+```
+python -m venv venv
+source venv/scripts/activate
+pip install -r requirements.txt
+```
+3. Проект готов к запуску из директории src:
+```
+python src/main.py
+```
+## Управление:
+
+Вызов справки по доступным аргументам:
+```
+python src/main.py -h
+```
+
+Выбор режима работы:
+```
+python src/main.py whats-new
+```
+```
+python src/main.py latest-versions
+```
+```
+python src/main.py download
+```
+```
+python src/main.py pep
+```
